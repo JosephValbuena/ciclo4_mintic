@@ -1,0 +1,6 @@
+com\mintic\ciclo4r1\repository\crud\UserCrudRepository.class
+com\mintic\ciclo4r1\controllers\UserController.class
+com\mintic\ciclo4r1\models\User.class
+com\mintic\ciclo4r1\repositories\UserRepository.class
+com\mintic\ciclo4r1\Ciclo4r1Application.class
+com\mintic\ciclo4r1\services\UserService.class
