@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
 
-    <title>Autenticación</title>
+    <title>Registrate</title>
 </head>
 
 <body>
@@ -45,42 +45,35 @@
             </nav>
         </header>
         <main class="d-flex align-items-center ps-4">
-            <div class="col d-flex p-4 justify-content-lg-end justify-content-sm-center">
-                <form id="" class="col-lg-4 p-4">
+            <div class="col d-flex p-4 justify-content-lg-center justify-content-sm-center">
+                <form id="" class="col-lg-4 p-4 form">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label" id="userEmail"><strong>Email</strong></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="name" class="form-label" id="userEmail"><strong>Nombre</strong></label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" id="userEmail"><strong>Email</strong></label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text text-dark">Nunca comparta su correo electrónico con portales o personas desconcidas.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label" id="userPassword"><strong>Password</strong></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="passw" class="form-label" id="userPassword"><strong>Contraseña</strong></label>
+                        <input type="password" class="form-control" id="passw">
                     </div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-login">
-                        Ingresar
+                    <div class="mb-3">
+                        <label for="repeatPassw" class="form-label" id="userPassword"><strong>Repetir Contraseña</strong></label>
+                        <input type="password" class="form-control" id="repeatPassw">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btn-sign">
+                        Regístrate
                     </button>
-                    <p id="label-registro">¿No tienes cuenta? <a id="link-registro" href="registro.html"> Crea tu cuenta aquí</a></p>
+                    <p id="label-registro">¿Ya tienes cuenta? <a id="link-registro" href="index.html"> Inicia Sesión aquí</a></p>
                     </p>
                 </form>
             </div>
 
         </main>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Reto 1</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <footer class="d-flex p-3 align-items-center justify-content-center bg-dark">
             <p class="mb-0">Proyecto realizado por estudiantes de Misión TIC 2022</p>
         </footer>
@@ -93,7 +86,7 @@
         </div> -->
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/registro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 

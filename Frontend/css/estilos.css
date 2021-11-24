@@ -1,33 +1,38 @@
-header{
-    box-shadow:0 0 10px black;
+header {
+    box-shadow: 0 0 10px black;
 }
 
-main{
-    height: 83vh;
+main {
+    height: 100vh;
     background-image: url("../img/sunset.jpg");
     background-position: center;
     background-size: cover;
 }
-form{
+
+.form {
+    width: 60%;
+}
+
+form {
     box-shadow: 0 0 1rem rgba(46, 46, 46, 1);
     border-radius: 8px;
     background-color: rgba(255, 255, 255, .40);
     backdrop-filter: blur(15px);
 }
 
-form > p{
+form>p {
     margin-top: 1rem;
 }
 
-footer{
-    position: absolute; 
-    bottom: 0; 
-    width: 100%; 
+footer {
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
     color: #fff;
     line-height: 0.8rem;
 }
 
-footer > p{
+footer>p {
     margin-top: .5rem;
 }
 
@@ -44,26 +49,20 @@ footer > p{
     visibility: hidden;
 }
 
-.active{
+.active {
     visibility: visible;
 }
 
-.pop-up{
+.pop-up {
     background-color: #f8f8f8;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
     border-radius: 5px;
     padding: 20px;
     text-align: center;
     width: 600px;
-    
-
-
-
-
-
 }
 
-#btn-cerrar-popup{
+#btn-cerrar-popup {
     font-size: 16px;
     line-height: 16px;
     display: block;
@@ -72,14 +71,12 @@ footer > p{
     transition: .3s ease all;
 }
 
-#btn-cerrar-popup:hover{
+#btn-cerrar-popup:hover {
     color: #151515;
 }
 
-#modal-message{
+#modal-message {
     font-size: 24px;
     font-weight: 400;
     margin: 20px 10px 40px;
-
-
 }
