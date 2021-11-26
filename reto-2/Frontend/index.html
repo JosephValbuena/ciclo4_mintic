@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+
+    <title>Autenticación</title>
+</head>
+
+<body>
+    <div class="d-flex flex-column">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#">
+                        <img src="img/GoatLogo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">Reto 1
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ps-4 pe-4">
+                                <a class="nav-link fw-bold" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item ps-4 pe-4">
+                                <a class="nav-link fw-bold" href="registro.html">Registro</a>
+                            </li>
+                            <!-- <li class="nav-item ps-4 pe-4">
+                                <a class="nav-link fw-bold" href="#">Catálogo</a>
+                            </li>
+                            <li class="nav-item ps-4 pe-4">
+                                <a class="nav-link fw-bold" href="#">Contacto</a>
+                            </li> -->
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="d-flex align-items-center ps-4">
+            <div class="col d-flex p-4 justify-content-lg-end justify-content-sm-center">
+                <form id="" class="col-lg-4 p-4">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label" id="userEmail"><strong>Email</strong></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text text-dark">Nunca comparta su correo electrónico con portales o personas desconcidas.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label" id="userPassword"><strong>Password</strong></label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-login">
+                        Ingresar
+                    </button>
+                    <p id="label-registro">¿No tienes cuenta? <a id="link-registro" href="registro.html"> Crea tu cuenta aquí</a></p>
+                    </p>
+                </form>
+            </div>
+
+        </main>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Reto 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="d-flex p-3 align-items-center justify-content-center bg-dark">
+            <p class="mb-0">Proyecto realizado por estudiantes de Misión TIC 2022</p>
+        </footer>
+        <!-- <div class="overlay" id="overlay">
+            <div class="pop-up" id="pop-up">
+                <a href="#" id="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <p id="modal-message">Mensaje de prueba</p>
+                <button class="btn btn-primary" id="dmlcerrar">Cerrar</button>
+            </div>
+        </div> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
