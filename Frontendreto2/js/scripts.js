@@ -1,76 +1,62 @@
-
-
-
-$(document).ready(function () {
-    //configura el aspecto inicial de la pagina
-    getPetition();
+$(document).ready(function() {
+    let user = localStorage.getItem('user');
+    if (user) {
+        let usr = JSON.parse(user);
+        if (usr.type !== 'ADMIN') {
+            $("#nav-registro").hide();
+        }
+    }
 });
 
-function esVacio(dato){
+function esVacio(dato) {
     return !dato.trim().length;
 }
 
 let btnLogin = document.getElementById('btn-login');
 
-btnLogin.addEventListener("click", () =>{
-    let usrEmail = $('#exampleInputEmail1').val();
-    let usrPassword = $('#exampleInputPassword1').val();
-    let modal = $('#modal-body');
-    let pltMessage = "";  
-        
+btnLogin.addEventListener("click", () => {
+    let usrEmail = $('#email').val();
+    let usrPassword = $('#passw').val();
 
-    if (esVacio(usrEmail) || esVacio(usrPassword)){
-        
-        pltMessage = "Email y contraseña son requeridos";
-        modal.html(pltMessage);
+
+    if (esVacio(usrEmail) || esVacio(usrPassword)) {
+        alert("Email y contraseña son requeridos");
+
     } else {
-        
-        getUserData();
+        getUserData(usrEmail, usrPassword);
     }
 
 }, true);
 
 
-function getPetition() {
-    
+function getUserData(email, password) {
+
     $.ajax({
-        url: "http://localhost:8080/api/user/all",
+        url: "http://localhost:8080/api/user/" + email + "/" + password,
         type: 'GET',
-        contentType:"application/JSON",
+        contentType: "application/JSON",
+        success: function(respuesta) {
 
-        success: function (respuesta) {
-            console.log(respuesta);
-            return respuesta;
-        },
-        error: function(xhr, status) {
-            console.log(status);
-        }
-    });
-}
-
-function getUserData() {
-    var email= $('#exampleInputEmail1').val(),
-        password= $('#exampleInputPassword1').val(),
-        modal = $('#modal-body'),
-        pltMessage = "";
-    
-    
-    $.ajax({
-        url:"http://localhost:8080/api/user/" + email + "/" + password,
-        type: 'GET',
-        contentType:"application/JSON",
-
-        success: function(respuesta){
-            console.log(respuesta);
-            if (respuesta == false || respuesta.name == "NO DEFINIDO"){
-                pltMessage = "Usuario o contraseña incorrectos";
-                modal.html(pltMessage);
-            }else {
-                pltMessage = "Bienvenido " + respuesta.name;
-                modal.html(pltMessage);
+            if (respuesta.name == null) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Usuario o contraseña no validos',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                localStorage.setItem("user", JSON.stringify(respuesta));
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Bienvenido ' + respuesta.name,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             };
-            
-           
+
+
         },
         error: function(xhr, status) {
             console.log(status);
@@ -78,12 +64,3 @@ function getUserData() {
 
     });
 }
-
-
-
-let btnCerrarModal = document.getElementById('close-modal');
-
-btnCerrarModal.addEventListener("click", () =>{
-    $('#exampleInputEmail1').val("");
-    $('#exampleInputPassword1').val("");
-});

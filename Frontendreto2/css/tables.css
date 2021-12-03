@@ -1,0 +1,117 @@
+/* Barra de navegación */
+
+header {
+    box-shadow: 0 0 10px black;
+}
+
+
+/* Contenido principal */
+
+main {
+    background-image: url("../img/sunset.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+main h1 {
+    text-align: center;
+    color: #fff;
+    padding: .3em 0;
+}
+
+
+/* Estilos de la tabla*/
+
+.tableHolder {
+    margin: 0 5em;
+    padding: 1em;
+}
+
+.headerTable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    color: #fff;
+    line-height: 0.8rem;
+}
+
+footer>p {
+    margin-top: .5rem;
+}
+
+
+/*** PARA EL POPUP ***/
+
+.modals {
+    width: 100%;
+    height: 100%;
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.popup {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contenedorP {
+    margin: 15px 10px;
+}
+
+#close-popup {
+    position: fixed;
+    left: 97%;
+    top: -2%;
+    font-size: 40px;
+    background: rgb(92, 91, 91);
+    border-radius: 50%;
+}
+
+#close-popup:hover {
+    cursor: pointer;
+    background: rgb(150, 150, 150);
+}
+
+.contentL {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/* Estilos del formulario del Popup*/
+
+.form {
+    width: 100%;
+}
+
+.inputHolder {
+    width: 49%;
+}
+
+.checksZone {
+    padding: 0 1em 1em 0;
+    margin: 0 0 1em 0;
+    border-right: 2px solid #292929;
+}
+
+.titleCheck {
+    font-weight: bold;
+}
