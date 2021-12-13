@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Usuarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/tables.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="img/GoatLogo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">8 BITS LTDA
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ps-4 pe-4">
+                            <a class="nav-link fw-bold" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4">
+                            <a class="nav-link fw-bold" href="listaProductos.html">Productos</a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4">
+                            <a class="nav-link fw-bold" href="tableUser.html">Usuarios</a>
+                        </li>
+                        <li class="nav-item ps-4 pe-4">
+                            <a class="nav-link fw-bold" href="profile.html">Perfil</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="tableHolder">
+            <div class="headerTable">
+                <h1>Tabla de Usuarios</h1>
+                <div class="buttonNUser">
+                    <button onclick="openNAdmin()" class="btn btn-light">Nuevo Administrador</button>
+                </div>
+            </div>
+            <table class="table table-light table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">identification</th>
+                        <th scope="col">name</th>
+                        <th scope="col">address</th>
+                        <th scope="col">phone</th>
+                        <th scope="col">email</th>
+                        <th scope="col">zone</th>
+                        <th scope="col">type</th>
+                        <th scope="col">acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="table"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="modals" id="formEdit">
+        <div class="popup">
+            <i class="fas fa-times-circle closeEdit" id="close-popup"></i>
+            <div class="contenedorP">
+                <div class="iconC text-center">
+                    <img src="../../assets/client.png" alt="" height="80">
+                </div>
+                <h2 class="text-center title">Editar Usuario</h2>
+                <br>
+                <form id="" class="col-lg-4 p-4 form">
+                    <input type="number" class="form-control" id="id" hidden>
+                    <div class="d-flex justify-content-between">
+                        <div class="mb-3 inputHolder">
+                            <label for="name" class="form-label" id="userId"><strong>Número de Identificación</strong></label>
+                            <input type="number" class="form-control" id="identification">
+                        </div>
+                        <div class="mb-3 inputHolder">
+                            <label for="name" class="form-label" id="userName"><strong>Nombre</strong></label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="mb-3 inputHolder">
+                            <label for="name" class="form-label" id="userAddress"><strong>Dirección</strong></label>
+                            <input type="text" class="form-control" id="address">
+                        </div>
+                        <div class="mb-3 inputHolder">
+                            <label for="name" class="form-label" id="userPhone"><strong>Teléfono</strong></label>
+                            <input type="number" class="form-control" id="phone">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" id="userEmail"><strong>Email</strong></label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text text-dark">Nunca comparta su correo electrónico con portales o personas desconcidas.</div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="mb-3 inputHolder">
+                            <label for="passw" class="form-label" id="userPassword"><strong>Contraseña</strong></label>
+                            <input type="password" class="form-control" id="passw">
+                        </div>
+                        <div class="mb-3 inputHolder">
+                            <label for="repeatPassw" class="form-label" id="userPassword"><strong>Repetir Contraseña</strong></label>
+                            <input type="password" class="form-control" id="repeatPassw">
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-start">
+                        <div class="checksZone me-4">
+                            <span class="titleCheck">Zona de trabajo</span>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="zone" id="zona1" value="ZONA 1" checked>
+                                <label class="form-check-label" for="zona1">
+                                  ZONA 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="zone" id="zona2" value="ZONA 2">
+                                <label class="form-check-label" for="zona2">
+                                  ZONA 2
+                                </label>
+                            </div>
+                        </div>
+                        <div class="checksType">
+                            <span class="titleCheck">Tipo de usuario</span>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="typeASESOR" value="ASESOR" checked>
+                                <label class="form-check-label" for="typeASESOR">
+                                  ASESOR COMERCIAL
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="typeCOORD" value="COORD">
+                                <label class="form-check-label" for="typeCOORD">
+                                  COORDINADOR DE ZONA
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary" id="btn-edit">
+                            Editar usuario
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <footer class="d-flex p-3 align-items-center justify-content-center bg-dark footerIndex">
+        <p class="mb-0">Proyecto realizado por estudiantes de Misión TIC 2022</p>
+    </footer>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/user/tableUser.js"></script>
+    <script src="js/user/editUser.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+header {
+    box-shadow: 0 0 10px black;
+}
+
+main {
+    background-image: url("../img/sunset.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.mainIndex {
+    height: 100vh
+}
+
+main h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: .4em;
+}
+
+.form {
+    width: 70%;
+    border-radius: 5px;
+}
+
+form {
+    box-shadow: 0 0 1rem rgb(10, 1, 87);
+    border-radius: px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+form>p {
+    margin-top: rem;
+}
+
+.inputHolder {
+    width: 49%;
+}
+
+.checksZone {
+    padding: 0 1em 1em 0;
+    margin: 0 0 1em 0;
+    border-right: 2px solid #292929;
+}
+
+.titleCheck {
+    font-weight: bold;
+}
+
+footer {
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    color: #fff;
+    line-height: 0.8rem;
+}
+
+footer>p {
+    margin-top: .5rem;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.active {
+    visibility: visible;
+}
+
+.pop-up {
+    background-color: #f8f8f8;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+}
+
+#btn-cerrar-popup {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #bbb;
+    transition: .3s ease all;
+}
+
+#btn-cerrar-popup:hover {
+    color: #151515;
+}
+
+#modal-message {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px 10px 40px;
+}
+
+.caja {
+    background-color: rgba(255, 255, 255, .7);
+    height: 90%;
+    margin: 0 1rem;
+    backdrop-filter: blur(15px);
+    overflow-y: scroll;
+    border-radius: 4px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, .8);
+}
+
+.listaProd {
+    width: 50vw;
+}
+
+#edit-form {
+    width: 30vw
+}
+
+.form-container {
+    height: 90%;
+}
+
+.form-prod {
+    height: 100%;
+    overflow-y: overflow;
+}
