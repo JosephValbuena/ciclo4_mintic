@@ -16,7 +16,7 @@ function saveUser(user) {
     //a un ws
     $.ajax({
         //url del servicio
-        url: "http://localhost:8081/api/user/new",
+        url: "http://129.151.118.226:8081/api/user/new",
         
         //envio datos capturados por el usuario a la peticion
         data: datosPeticion,

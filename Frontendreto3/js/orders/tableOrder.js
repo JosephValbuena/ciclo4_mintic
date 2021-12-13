@@ -18,7 +18,7 @@ function validateAuth(){
 function getOrders(){
     let order = "";
     $.ajax({
-        url: "http://localhost:8081/api/order/all",
+        url: "http://129.151.118.226:8081/api/order/all",
         type: "GET",
         contentType: "application/json",
         success: function(response){
@@ -43,7 +43,7 @@ function getOrders(){
 
 function seeDetail(id){
     $.ajax({
-        url: "http://localhost:8081/api/order/"+id,
+        url: "http://129.151.118.226:8081/api/order/"+id,
         type: "GET",
         contentType: "application/json",
         success: function(response){
@@ -93,13 +93,13 @@ function editStatus(id){
         alert("debe seleccionar un estado");
     }else{
         $.ajax({
-            url: "http://localhost:8081/api/order/"+id,
+            url: "http://129.151.118.226:8081/api/order/"+id,
             type: "GET",
             contentType: "application/json",
             success: function(response){
                 response.status = statusD;
                 $.ajax({
-                    url: "http://localhost:8081/api/order/update",
+                    url: "http://129.151.118.226:8081/api/order/update",
                     type: "PUT",
                     contentType: "application/json",
                     dataType: "json",

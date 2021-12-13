@@ -9,7 +9,7 @@ function esVacio(dato) {
 
 function getUser(id) {
     $.ajax({
-        url: "http://localhost:8080/api/user/all",
+        url: "http://129.151.118.226:8081/api/user/all",
         type: "GET",
         dataType: "json",
         success: function(users) {
@@ -69,7 +69,7 @@ $("#btn-edit").click(function() {
 
 function editUser(user) {
     $.ajax({
-        url: "http://localhost:8080/api/user/update",
+        url: "http://129.151.118.226:8081/api/user/update",
         type: "PUT",
         dataType: "json",
         contentType: "application/JSON",
@@ -113,7 +113,7 @@ function deleteAdmin(id) {
 
 function deleteU(id) {
     $.ajax({
-        url: "http://localhost:8080/api/user/" + id,
+        url: "http://129.151.118.226:8081/api/user/" + id,
         type: "DELETE",
         dataType: "json",
         contentType: "application/JSON",

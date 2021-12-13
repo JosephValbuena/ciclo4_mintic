@@ -21,7 +21,7 @@ function peticionProd () {
     //let table = "<table><tr><th>Marca</th><th>Modelo</th><th>Descripción</th>"
 
     $.ajax({
-        url:"http://localhost:8081/api/laptop/all",
+        url:"http://129.151.118.226:8081/api/laptop/all",
         type:"GET",
         contentType:"application/JSON",
 
@@ -65,7 +65,7 @@ function datosProductos(items) {
 function editarProducto(item) {
 
         $.ajax({
-            url:"http://localhost:8081/api/laptop/"+item,
+            url:"http://129.151.118.226:8081/api/laptop/"+item,
             type:"GET",
             contentType:"application/JSON",
             dataType: 'json',
@@ -179,7 +179,7 @@ function prodUpdate() {
     console.log("Los datos JSON son: "+dataUpdate);
 
     $.ajax({
-        url:"http://localhost:8081/api/laptop/update",
+        url:"http://129.151.118.226:8081/api/laptop/update",
         data: dataUpdate,
         type:"PUT",
         contentType:"application/JSON",
@@ -203,7 +203,7 @@ function borraProducto(item) {
 
     if (deleteProd == true){
         $.ajax({
-            url:"http://localhost:8081/api/laptop/"+item,
+            url:"http://129.151.118.226:8081/api/laptop/"+item,
             type:"DELETE",
             contentType:"application/JSON",
             dataType:"json",

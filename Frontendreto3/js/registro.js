@@ -21,7 +21,7 @@ let btn = document.getElementById('btn-sign');
 btn.addEventListener('click', () => {
     var id = 0;
     $.ajax({
-        url: "http://localhost:8080/api/user/all",
+        url: "http://129.151.118.226:8081/api/user/all",
         type: "GET",
         contentType: "application/JSON",
         success: function(response) {
@@ -70,7 +70,7 @@ btn.addEventListener('click', () => {
 function validateEmail(data) {
     var result;
     $.ajax({
-        url: "http://localhost:8080/api/user/emailexist/" + data.email,
+        url: "http://129.151.118.226:8081/api/user/emailexist/" + data.email,
         type: "GET",
         contentType: "application/JSON",
         success: function(response) {
@@ -85,7 +85,7 @@ function validateEmail(data) {
 
 function validateAuth(data) {
     $.ajax({
-        url: "http://localhost:8080/api/user/" + data.email + "/" + data.password,
+        url: "http://129.151.118.226:8081/api/user/" + data.email + "/" + data.password,
         type: "GET",
         contentType: "application/JSON",
         success: function(response) {
@@ -101,7 +101,7 @@ function validateAuth(data) {
 function signout(data) {
 
     $.ajax({
-        url: "http://localhost:8080/api/user/new",
+        url: "http://129.151.118.226:8081/api/user/new",
         type: "POST",
         dataType: "json",
         contentType: "application/JSON",

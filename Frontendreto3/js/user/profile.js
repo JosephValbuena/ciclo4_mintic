@@ -62,7 +62,7 @@ function getUser(){
 
 function getUsers(){
     $.ajax({
-        url: "http://localhost:8081/api/user/all",
+        url: "http://129.151.118.226:8081/api/user/all",
         type: "GET",
         contentType: "application/json",
         success: function(response){
@@ -122,7 +122,7 @@ function enableButtonAse(exist){
 function getProducts(){
     $("#formOrder").show();
     $.ajax({
-        url: 'http://localhost:8081/api/laptop/all',
+        url: 'http://129.151.118.226:8081/api/laptop/all',
         type: 'GET',
         contentType: 'application/json',
         success: function(response){
@@ -153,7 +153,7 @@ function getSelectedProduct(){
 
     if(can){
         $.ajax({
-            url: 'http://localhost:8081/api/laptop/'+value,
+            url: 'http://129.151.118.226:8081/api/laptop/'+value,
             type: 'GET',
             contentType: 'application/json',
             success: function(response){
@@ -184,7 +184,7 @@ function postOrder(){
     for(let i=1; i<cantidadProductos.length;i++ ){
         iProv = i.toString();
         $.ajax({
-            url: 'http://localhost:8081/api/laptop/'+cantidadProductos[i],
+            url: 'http://129.151.118.226:8081/api/laptop/'+cantidadProductos[i],
             type: 'GET',
             contentType: 'application/json',
             success: function(response){
@@ -221,7 +221,7 @@ function generateQuantities(id, response){
 
 function getIdOrder(){
     $.ajax({
-        url: "http://localhost:8081/api/order/all",
+        url: "http://129.151.118.226:8081/api/order/all",
         type: "GET",
         contentType: "application/json",
         success: function(response){
@@ -247,7 +247,7 @@ function allOrder(){
 
     console.log(orderToSend);
     $.ajax({
-        url: 'http://localhost:8081/api/order/new',
+        url: 'http://129.151.118.226:8081/api/order/new',
         type: 'POST',
         contentType: 'application/json',
         dataType: 'json',
