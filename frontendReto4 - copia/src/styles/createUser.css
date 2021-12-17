@@ -1,0 +1,7 @@
+.form-user {
+    overflow-y: overflow;
+    box-shadow: 0 0 1rem rgb(10, 1, 87);
+    border-radius: px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+}

@@ -1,0 +1,11 @@
+.auth{
+    height:100vh;
+    background-image: url('../img/Sunset.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.formLogin{
+    background: #fff;
+    border-radius: 10px;
+}

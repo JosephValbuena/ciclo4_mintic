@@ -1,0 +1,27 @@
+.form-prod {
+    overflow-y: overflow;
+    box-shadow: 0 0 1rem rgb(10, 1, 87);
+    border-radius: px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+
+.form-control{
+    width: 100%;
+}
+
+
+.inputHolder {
+    width: 100%;
+}
+
+.checksZone {
+    padding: 0 1em 1em 0;
+    margin: 0 0 1em 0;
+    border-right: 2px solid #292929;
+}
+
+.titleCheck {
+    font-weight: bold;
+}

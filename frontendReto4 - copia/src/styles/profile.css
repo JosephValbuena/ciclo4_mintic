@@ -1,0 +1,106 @@
+.mainProfile{
+    background-image: url("../img/Sunset.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh
+}
+
+.btnOrderProfile{
+    display: flex;
+    justify-content: flex-end;
+    gap: .5em;
+    padding: 2em;
+}
+
+
+.profile{
+    background: #ecececee;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 2em;
+    padding: 2em;
+}
+
+.profile img{
+    width: 15%;
+}
+
+.profile h2{
+    margin-top: 1em;
+}
+
+.buttonOrder{
+    text-align: end;
+    margin: 0 5em;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 2em 5em;
+    padding: 1em;
+    background: #f0efef;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius:10px
+}
+
+.userData h5{
+    text-align: start;
+    font-size: 16px;
+}
+
+.userData p{
+    border: 1px solid #7c7c7c;
+    border-radius: 10px;
+    
+}
+
+.dateTitle{
+    text-align: start;
+    margin: 1em 5em 0em 4em;
+}
+
+.firstStep{
+    display: flex;
+    justify-content: space-around;
+}
+
+.firstStep button{
+    margin-left: 10px;
+}
+
+.secondStep{
+    margin-top: 1em;    
+}
+
+.prod{
+    display: flex;
+    justify-content: space-between;
+}
+
+.prod p{
+    margin-top: 1em;
+}
+
+/* Reto 4 */
+.inputsDateHolder{
+    margin-top:1em;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    gap: 1em;
+}
+.buttonFilterDateHolder{
+    margin-top: 2em;
+}
+
+.selectHolderFilterS{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.selectHolderFilterS select{
+    width: 30%;
+}
